@@ -32,10 +32,10 @@ func New(connString string) (*Db, error) {
 
 // ConnString returns a connection string based on the parameters it's given
 // This would normally also contain the password, however we're not using one
-func ConnString(host string, port int, user string, dbName string) string {
+func ConnString(host string, port int, user string, password string, dbName string) string {
 	return fmt.Sprintf(
-		"host=%s port=%d user=%s dbname=%s sslmode=disable",
-		host, port, user, dbName,
+		"host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
+		host, port, user, password, dbName,
 	)
 }
 

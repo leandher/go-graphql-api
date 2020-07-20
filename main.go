@@ -30,7 +30,7 @@ func initializeAPI() (*chi.Mux, *postgres.Db) {
 
 	// Create a new connection to our pg database
 	db, err := postgres.New(
-		postgres.ConnString("localhost", 5432, "bradford", "go_graphql_db"),
+		postgres.ConnString("localhost", 5432, "postgres", "q1w2e3r4", "go_graphql_db"),
 	)
 	if err != nil {
 		log.Fatal(err)
